@@ -1,0 +1,288 @@
+.content_message_container {
+    padding: 12px;
+    background-color: var(--color-message-container);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-height: calc(100vh - 185px);
+    max-height: calc(100vh - 185px);
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content_message_container::-webkit-scrollbar {
+    display: none;
+}
+
+.no_message_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    margin: auto;
+}
+
+.no_message_text {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--color-message-text);
+}
+
+.no_message_text span i {
+    font-size: 20px;
+}
+
+.content_message_hours_user1,
+.content_message_hours_user2 {
+    text-align: center;
+    color: var(--color-message-text);
+    margin: 10px 0;
+}
+
+.content_message_item_content_container_user1,
+.content_message_item_content_container_user2,
+.content_message_file_container_user2 {
+    max-width: 50%;
+}
+
+.content_message_item_content_container_user1 {
+    min-width: 50%;
+}
+
+.content_message_item_content_messenger_user1 {
+    display: flex;
+}
+
+.content_message_item_avartar_user1 {
+    margin-top: auto;
+    margin-right: 5px;
+}
+
+.content_message_item_avartar_user1 .content_message_avatar,
+.content_message_item_avartar_user2 .content_message_avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content_message_text_container_user1,
+.content_message_text_container_user2 {
+    padding: 8px;
+    border-radius: 12px;
+    background-color: var(--color-content-message-text-user1);
+    color: var(--color-white);
+    margin: 0;
+    word-break: break-all;
+    width: fit-content;
+}
+
+.content_message_text_container_user2 {
+    background-color: var(--color-primary);
+    background-image: var(--color-primary);
+}
+
+.content_message_text_user1 {
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.content_message_file_container_user1,
+.content_message_file_container_user2 {
+    --cols: 2;
+    --spacing: 3px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    z-index: 0;
+}
+
+.content_message_file_item_user1,
+.content_message_file_item_user2 {
+    width: calc((100% / var(--cols)) - (var(--spacing) * 2));
+    margin: var(--spacing);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+}
+
+.content_message_file_item_video_user1,
+.content_message_file_item_video_user2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.content_message_file_item_image_user1,
+.content_message_file_item_image_user2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.content_message_file_item_file_user1,
+.content_message_file_item_file_user2 {
+    width: 100%;
+    min-height: 110px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--color-white);
+    text-decoration: none;
+    margin-top: 6px;
+}
+
+.content_message_file_item_file_user1:hover,
+.content_message_file_item_file_user2:hover {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.file_container_user1,
+.file_container_user2 {
+    width: 100%;
+    height: 100%;
+}
+
+.file_top_user1,
+.file_top_user2 {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-primary);
+    background-image: var(--color-primary);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-decoration: underline;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.file_top_user1 span,
+.file_top_user2 span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.file_bottom_user1,
+.file_bottom_user2 {
+    width: 100%;
+    background-color: var(--color-content-message-text-user1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.content_message_item_content_messenger_user2 {
+    display: flex;
+}
+
+.content_message_item_avartar_user2 {
+    margin-top: auto;
+}
+
+.content_message_item_left_container_user2 {
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: 100%;
+}
+
+.link_message_user2,
+.link_message_user1 {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+.link_message_user2:hover,
+.link_message_user1:hover {
+    color: var(--color-white);
+}
+
+.content_message_item_content_messenger_user2 {
+    position: relative;
+}
+
+.user2_more_button {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translateY(-50%);
+    color: var(--color-message-text);
+    transition: all .3s;
+}
+
+.user2_more_button i {
+    padding: 12px;
+}
+
+.user2_more_button i:hover {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: var(--color-primary);
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.user2_menu_list {
+    position: absolute;
+    min-width: 180px;
+    top: 35px;
+    right: -100px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* PC */
+@media (min-width: 64em) {}
+
+/* IPAD Pro */
+@media (max-width: 64em) {}
+
+/* TABLET & MOBILE */
+@media (max-width: 63.9375em) {}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .user2_more_button {
+        left: 42%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 46.25em) {
+
+    .content_message_item_content_container_user2,
+    .content_message_file_container_user2 {
+        max-width: 80% !important;
+    }
+
+    .user2_more_button {
+        left: 8%;
+    }
+
+    .user2_menu_list {
+        left: 0;
+    }
+}

@@ -1,0 +1,94 @@
+.logo_messenger_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.logo_messenger_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.logo_messenger img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.logo_messenger_button_container {
+    display: flex;
+}
+
+.logo_messenger_avatar_user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.options_container {
+    --cols: 2;
+    --spacing: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.options_container li {
+    width: calc((100% / var(--cols)) - (var(--spacing) * 2));
+    margin: var(--spacing);
+    height: 50px;
+}
+
+
+.logo_messenger_color {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.logo_messenger_color_item_active .logo_messenger_color {
+    outline: 5px solid lightskyblue;
+}
+
+.color_fill_icon {
+    color: white !important;
+    background-clip: text !important;
+    color: transparent !important;
+    background-image: var(--color-primary) !important;
+    background-color: var(--color-primary) !important;
+}
+
+
+/* PC */
+@media (min-width: 64em) {}
+
+/* IPAD Pro */
+@media (max-width: 64em) {}
+
+/* TABLET & MOBILE */
+@media (max-width: 63.9375em) {}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {}
+
+/* MOBILE */
+@media (max-width: 46.25em) {
+    .logo_messenger img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo_messenger_text {
+        font-size: 18px !important;
+    }
+}
