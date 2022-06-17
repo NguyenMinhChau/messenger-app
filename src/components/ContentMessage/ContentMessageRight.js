@@ -67,30 +67,14 @@ function ContentMessageRight({ message }) {
                                         .split(' ')
                                         .map((item, index) => {
                                             if (
-                                                item.includes('http') ||
-                                                item.includes('https') ||
-                                                item.includes('www') ||
-                                                item.includes('.com.vn') ||
-                                                item.includes('.gov.vn') ||
-                                                item.includes('.edu.vn') ||
-                                                item.includes('.net.vn') ||
-                                                item.includes('.org.vn') ||
-                                                item.includes('.info.vn') ||
-                                                item.includes('.biz.vn') ||
-                                                item.includes('.name.vn') ||
-                                                item.includes('.pro.vn') ||
-                                                item.includes('.ac.vn') ||
-                                                item.includes('.com') ||
-                                                item.includes('.net') ||
-                                                item.includes('.org') ||
-                                                item.includes('.info') ||
-                                                item.includes('.biz') ||
-                                                item.includes('.name') ||
-                                                item.includes('.pro') ||
-                                                item.includes('.ac') ||
-                                                item.includes('.edu') ||
-                                                item.includes('.gov') ||
-                                                item.includes('.vn')
+                                                item.startsWith('http://') ||
+                                                item.startsWith('https://') ||
+                                                item.endsWith('.com') ||
+                                                item.endsWith('.net') ||
+                                                item.endsWith('.org') ||
+                                                item.endsWith('.edu') ||
+                                                item.endsWith('.gov') ||
+                                                item.endsWith('.vn')
                                             ) {
                                                 return (
                                                     <a
@@ -109,34 +93,6 @@ function ContentMessageRight({ message }) {
                                             return item + ' ';
                                         })}
                             </p>
-                            {/* {!toogleEditCancel && (
-                                <div
-                                    className={`${clsx(
-                                        styles.user2_more_button
-                                    )}`}
-                                >
-                                    <i
-                                        className='fa-solid fa-ellipsis-vertical'
-                                        onClick={() =>
-                                            handleSetMeunList(message.id)
-                                        }
-                                    ></i>
-                                    {toogleMenuList &&
-                                        idMessageMenuList === message.id && (
-                                            <div
-                                                className={`${clsx(
-                                                    styles.user2_menu_list
-                                                )}`}
-                                            >
-                                                <MenuList
-                                                    idMessage={
-                                                        idMessageMenuList
-                                                    }
-                                                />
-                                            </div>
-                                        )}
-                                </div>
-                            )} */}
                         </div>
                     )}
                     <div
